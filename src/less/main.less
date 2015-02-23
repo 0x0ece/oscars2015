@@ -1,0 +1,284 @@
+/* material-ui */
+@import "node_modules/material-ui/src/less/scaffolding.less";
+
+//Define a custom less file to override any variables defined in scaffolding.less
+@import "custom-overrides.less";
+
+@import "node_modules/material-ui/src/less/components.less";
+
+//Your custom app styles
+.page {
+	max-width: 740px;
+	margin: 50px auto;
+}
+
+.insights(@color) {
+	.mui-floating-action-button .mui-floating-action-button-container { background-color: @color; }
+	&.mui-z-depth-4 {
+		box-shadow: 0 10px 18px @color;
+	}
+}
+
+
+h1 {
+	font-size: 60px;
+	line-height: 60px;
+	font-weight: 700px;
+	color: rgba(0, 0, 0, 0.8);
+	padding: 0;
+}
+
+h2 {
+	font-size: 32px;
+	line-height: 40px;
+	font-weight: 300px;
+	color: rgba(0, 0, 0, 0.439216);
+	padding: 0;
+}
+
+h3 {
+	font-size: 32px;
+	line-height: 40px;
+	font-weight: 700px;
+	color: rgba(0, 0, 0, 0.8);
+	padding: 0;
+}
+
+p {
+	font-size: 20px;
+	line-height: 30px;
+	padding: 0;
+	margin-bottom: 10px;
+}
+
+
+menu {
+	display: block;
+	padding: 0;
+	margin: 50px 0;
+
+	menuitem {
+		display: inline-block;
+		& + menuitem { margin-left: 35px; }
+	}
+}
+
+.graph-title { 
+	margin-bottom: 30px;
+}
+
+.page-main, .page-share, .page-more {
+	margin-bottom: 50px;	
+}
+
+.mui-floating-action-button {
+
+  @menu-size: 120px;
+  @menu-font-size: 20px;
+  @share-size: 80px;
+  @share-font-size: 16px;
+
+  @color-insight0: #d1a930; //100% sat: #e0a800; //orig: #d4a619;
+  @color-insight0-hover: darken(@color-insight0, 5%);
+  @color-insight0-ripple: fade(@white, 50%);
+  @color-insight0-ripple-focus: @color-insight0-ripple;
+
+  @color-insight1: @red-700;
+  @color-insight1-hover: darken(@color-insight1, 5%);
+  @color-insight1-ripple: fade(@white, 50%);
+  @color-insight1-ripple-focus: @color-insight1-ripple;
+
+  @color-insight2: @purple-700;
+  @color-insight2-hover: darken(@color-insight2, 5%);
+  @color-insight2-ripple: fade(@white, 50%);
+  @color-insight2-ripple-focus: @color-insight2-ripple;
+
+  @color-insight3: @indigo-700;
+  @color-insight3-hover: darken(@color-insight3, 5%);
+  @color-insight3-ripple: fade(@white, 50%);
+  @color-insight3-ripple-focus: @color-insight3-ripple;
+
+  @color-insight4: @teal-700;
+  @color-insight4-hover: darken(@color-insight4, 5%);
+  @color-insight4-ripple: fade(@white, 50%);
+  @color-insight4-ripple-focus: @color-insight4-ripple;
+
+  @color-twitter: #00aced;
+  @color-twitter-hover: darken(@color-twitter, 5%);
+  @color-twitter-ripple: fade(@white, 50%);
+  @color-twitter-ripple-focus: @color-twitter-ripple;
+  
+  @color-facebook: #3b579d;
+  @color-facebook-hover: darken(@color-facebook, 5%);
+  @color-facebook-ripple: fade(@white, 50%);
+  @color-facebook-ripple-focus: @color-facebook-ripple;
+
+  &.button-menu {
+  	.button-size(@menu-size, @menu-font-size);
+  }
+  &.button-share {
+  	.button-size(@share-size, @share-font-size);
+  }
+
+  &.color-insight0 {
+  	.button-color(@color-insight0, @color-insight0-hover, @color-insight0-ripple, @color-insight0-ripple-focus);
+  }
+  &.color-insight1 {
+  	.button-color(@color-insight1, @color-insight1-hover, @color-insight1-ripple, @color-insight1-ripple-focus);
+  }
+  &.color-insight2 {
+  	.button-color(@color-insight2, @color-insight2-hover, @color-insight2-ripple, @color-insight2-ripple-focus);
+  }
+  &.color-insight3 {
+  	.button-color(@color-insight3, @color-insight3-hover, @color-insight3-ripple, @color-insight3-ripple-focus);
+  }
+  &.color-insight4 {
+  	.button-color(@color-insight4, @color-insight4-hover, @color-insight4-ripple, @color-insight4-ripple-focus);
+  }
+
+  &.color-twitter {
+  	.button-color(@color-twitter, @color-twitter-hover, @color-twitter-ripple, @color-twitter-ripple-focus);
+  }
+  &.color-facebook {
+  	.button-color(@color-facebook, @color-facebook-hover, @color-facebook-ripple, @color-facebook-ripple-focus);
+  }
+
+
+  .button-size(@size, @font-size) {
+    &, .mui-floating-action-button-container {
+      height: @size;
+      width: @size;
+    }
+    .mui-floating-action-button-container {
+      line-height: @size;
+      text-align: center;
+      color: white;
+      font-size: @font-size;
+    }	  	
+  }
+  .button-color(@color, @color-hover, @color-ripple, @color-ripple-focus) {
+    .mui-floating-action-button-container {
+      background-color: @color;
+
+      &:hover,
+      &.mui-is-keyboard-focused {
+        background-color: @color-hover;
+      }
+    }
+
+    .mui-touch-ripple {
+      .mui-ripple-circle-inner {
+        background-color: @color-ripple;
+      }
+    }
+
+    .mui-focus-ripple {
+      .mui-focus-ripple-inner {
+        background-color: @color-ripple-focus;
+      }
+    }
+
+	&.mui-z-depth-4 {
+	  box-shadow: 0 10px 18px @color;
+	}    
+  }
+}
+
+
+// layout
+.page-main {
+	float: left;
+	width: 630px;
+	max-width: 630px;
+	margin-right: 30px;
+}
+.page-share {
+	max-width: 80px;
+	float: left;
+	h3 { text-align: center; margin-top: 80px; }
+	.mui-floating-action-button { margin-bottom: 20px; }
+}
+.page-more {
+	clear: both;
+}
+
+// mobile layout
+@media (max-width: 768px) {
+
+	#universe { padding: 20px 10px; }
+	.page { margin: 0; }
+
+	h1 {
+		font-size: 50px;
+		line-height: 50px;
+	}
+
+	.mui-floating-action-button {
+	  @menu-size: 90px;
+	  @menu-font-size: 16px;
+	  @share-size: 70px;
+	  @share-font-size: 14px;
+
+	  &.button-menu {
+	  	.button-size(@menu-size, @menu-font-size);
+	  }
+	  &.button-share {
+	  	.button-size(@share-size, @share-font-size);
+	  }
+	  .button-size(@size, @font-size) {
+	    &, .mui-floating-action-button-container {
+	      height: @size;
+	      width: @size;
+	    }
+	    .mui-floating-action-button-container {
+	      line-height: @size;
+	      text-align: center;
+	      color: white;
+	      font-size: @font-size;
+	    }	  	
+	  }	  
+	}
+
+
+	.page-main {
+		float: none;
+		width: 100%;
+		max-width: 100%;
+		margin-right: 0;
+	}
+	.page-share {
+		max-width: none;
+		float: left;
+		h3 { 
+			text-align: left; 
+			margin: 0;
+			margin-bottom: 20px;
+			line-height: 70px;
+			float: left;
+		}
+		.mui-floating-action-button { 
+			float: left;
+			margin-left: 20px;
+			margin-bottom: 20px; 
+		}
+	}
+	.page-more {
+		clear: both;
+	}
+
+	menu {
+		display: block;
+		padding: 0;
+		margin: 50px 0;
+
+		margin-left: -15px;
+
+		menuitem {
+			margin-left: 15px;
+			margin-bottom: 20px;
+			display: inline-block;
+			& + menuitem { margin-left: 15px; }
+		}
+	}
+
+}
