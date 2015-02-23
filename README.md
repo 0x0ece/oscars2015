@@ -18,3 +18,12 @@ Run your local server:
 ```
 gulp
 ```
+
+## Open source
+
+[dygraphs](http://dygraphs.com)
+
+[material-ui](http://material-ui.com/)
+
+[React](http://facebook.github.io/react/)
+
