@@ -4,6 +4,8 @@ Twitter's reaction to the #Oscars2015. The best of the evening through insights 
 
 View it online at: http://ecesena.github.io/oscars2015/
 
+![Oscars 2015](/src/www/oscars2015.png?raw=true "Oscars 2015")
+
 
 ## Development
 After cloning the repo, install its dependencies:
