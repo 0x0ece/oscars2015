@@ -12,11 +12,11 @@ var Main = module.exports = React.createClass({
 
   render: function() {
     var texts = {
-      noteworthy: 'Follies, faux pas, performances, and more: @johnlegend, @mrgrahammoore, #nph, #everythingisawesome, #inmemoriam',
-      films: 'The winningest (or most tweeted about) films of the year: #birdman, #glory, #whiplash, #selma, #bighero6',
-      actors: 'The best of the best, and the best dressed: #eddieredmayne, @lupita_nyongo, #dakotajohnson, @pattyarquette, @_juliannemoore',
-      redcarpet: 'Gossip galore on the red carpet: #rosamundpike, #marioncotillard, #margotrobbie, #emmastone, #lupitanyongo',
-      top: 'Top hashtags during the Oscars: @actuallynph, @ladygaga, #birdman, #glory, #whiplash'
+      noteworthy: 'Follies, faux pas, performances, and more: <span class="color-insight41">@johnlegend</span>, <span class="color-insight42">@mrgrahammoore</span>, <span class="color-insight43">#nph</span>, <span class="color-insight44">#everythingisawesome</span>, <span class="color-insight45">#inmemoriam</span>',
+      films: 'The winningest (or most tweeted about) films of the year: <span class="color-insight31">#birdman</span>, <span class="color-insight32">#glory</span>, <span class="color-insight33">#whiplash</span>, <span class="color-insight34">#selma</span>, <span class="color-insight35">#bighero6</span>',
+      actors: 'The best of the best, and the best dressed: <span class="color-insight21">#eddieredmayne</span>, <span class="color-insight22">@lupita_nyongo</span>, <span class="color-insight23">#dakotajohnson</span>, <span class="color-insight24">@pattyarquette</span>, <span class="color-insight25">@_juliannemoore</span>',
+      redcarpet: 'Gossip galore on the red carpet: <span class="color-insight11">#rosamundpike</span>, <span class="color-insight12">#marioncotillard</span>, <span class="color-insight13">#margotrobbie</span>, <span class="color-insight14">#emmastone</span>, <span class="color-insight15">#lupitanyongo</span>',
+      top: 'Top hashtags during the Oscars: <span class="color-insight01">@actuallynph</span>, <span class="color-insight02">@ladygaga</span>, <span class="color-insight03">#birdman</span>, <span class="color-insight04">#glory</span>, <span class="color-insight05">#whiplash</span>'
     }
 
     var red50 =    '#ffebee';
@@ -321,7 +321,7 @@ var Main = module.exports = React.createClass({
 
       <div className="page-main">
 
-        <p className="graph-title">{text}</p>
+        <p className="graph-title" dangerouslySetInnerHTML={{__html: text}}/>
         <Graph source={insight} colors={color} />
 
       </div>
