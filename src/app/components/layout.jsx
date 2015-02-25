@@ -85,7 +85,7 @@ var Layout = module.exports = React.createClass({
           <h3>Read more</h3>
           <p><a href="https://medium.com/@_megangroves/oscars-2015-on-twitter-identifying-trending-topics-fb0a92702352" target="_blank">Identifying Trending Topics</a></p>
           <p>Collecting data with PubSub (published soon)</p>
-          <p>Analyzing data with Dataflow (published soon)</p>
+          <p><a href="https://medium.com/@albluca/analyzing-the-oscars-with-google-cloud-dataflow-a71818cb5cb" target="_blank">Analyzing data with Dataflow</a></p>
           <p>&nbsp;</p>
           <p>&nbsp;</p>
           <p>&nbsp;</p>
